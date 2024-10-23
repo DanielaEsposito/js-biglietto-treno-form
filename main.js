@@ -23,42 +23,48 @@ const outputCode = document.getElementById("code")
 const discount18=20;
 const discount65=40;
 const priceForKm = 0.21;
-console.log(priceForKm);
+//console.log(priceForKm);
+
+
 
 
 formImput.addEventListener('submit', (event) => {
     event.preventDefault();
     const fullName = fullNameImput.value;
-    const km = kmiImput.value.parseInt();
-    const age = ageImput.value;
+    const km = parseInt(kmiImput.value);
+    const age = ageImput.value; 
+    //calcolo del prezzo finale con lo sconto e annuncio che tipo di biglietto avrà l'utente
+    const totalPriceForKm = km * priceForKm;
+    const finalPrice= 0;
+    const tiketType ="";
+    if(age > 65){
+        finalPrice = totalPriceForKm * discount65 / 100 ;
+        tiketType ="Biglietto Ridotto";
+        
+    }
+    else if(age > 18){
+        finalPrice = totalPriceForKm * discount18 / 100 ;
+        tiketType ="Biglietto Ridotto";
+        console.log(finalPrice);
+        console.log(tiketType); 
+    }
+    else{
+        finalPrice = km * priceForKm ;
+        tiketType ="Biglietto Standard";
+    }
+
     //numero random per la carrozza
     const carrozza = Math.floor(Math.random() * (10-1+1)+ 1);
     //numero random per il codice del treno
     const code = Math.floor(Math.random() * (9999-9000+1)+ 9000);
-    //calcolo del prezzo finale con lo sconto e annuncio che tipo di biglietto avrà l'utente
-    const totalPriceForKm = km * priceForKm;
-    const finalPrice=0;
-    const tiketType ="";
-    if(age > 18){
-        finalPrice = (totalPriceForKm * discount18) / 100 ;
-        tiketType ="Biglietto Ridotto";
-    }
-    else if(age > 65){
-        finalPrice = (totalPriceForKm * discount65) / 100 ;
-        tiketType ="Biglietto Ridotto";
-    }
-    else{
-        finalPrice = totalPriceForKm;
-        tiketType ="Biglietto Standard";
-    }
    
-    //console.log(fullName);
-    //console.log(age);
-    //console.log(km) ;
-    //console.log(finalPrice);
+    console.log(fullName);
+    console.log(age);
+    console.log(km) ;
+    console.log(finalPrice);
     
 outputName.innerHTML= fullName;
-outputPrice.innerHTML= finalPrice.toFixed(2) + "€";
+outputPrice.innerHTML= finalPrice + "€";
 outputCarrozza.innerHTML = carrozza;
 outputCode.innerHTML = code;
 outputTiket.innerHTML =tiketType;
