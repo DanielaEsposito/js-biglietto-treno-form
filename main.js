@@ -4,6 +4,8 @@ const fullNameImput = document.getElementById("input-fullname");
 const kmiImput = document.getElementById("input-km");
 const ageImput= document.getElementById("input-age");
 const formImput = document.getElementById("imput-form");
+const cancelImput=document.getElementById("btn-cancel")
+// # RACCOLTA OUTPUT
 const outputName =document.getElementById("name")
 const outputTiket =document.getElementById("tiket")
 const outputCarrozza = document.getElementById("carrozza")
@@ -56,15 +58,39 @@ formImput.addEventListener('submit', (event) => {
     //numero random per il codice del treno
     const code = Math.floor(Math.random() * (9999-9000+1)+ 9000);
    
+    
     console.log(fullName);
     console.log(age);
     console.log(km) ;
     
     
 outputName.innerHTML= fullName;
-outputPrice.innerHTML= finalPrice + "€";
+outputPrice.innerHTML= finalPrice.toFixed(2) + "€";
 outputCarrozza.innerHTML = carrozza;
 outputCode.innerHTML = code;
 outputTiket.innerHTML =tiketType;
+
+
+    
+ fullNameImput.value="".value
+ ageImput.value="";
+ kmiImput.value ="";
+ outputName.value ="";
+ outputPrice.value ="";
+ outputCarrozza.value ="";
+ outputCode.value ="";
+ outputTiket.value ="";
+
+})
+
+cancelImput.addEventListener("click", (event) =>{
+    fullNameImput.value="".value
+    ageImput.value="";
+    kmiImput.value ="";
+    outputName.value ="";
+    outputPrice.value ="";
+    outputCarrozza.value ="";
+    outputCode.value ="";
+    outputTiket.value ="";
 })
 
