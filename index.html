@@ -28,11 +28,11 @@
             <div class="container">
                 <div class="row">
                     <h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-                    <form class="container">
+                    <form id="imput-form"  class="container">
                         <div class="row">
                             <div class="col-4">
                                 <div class="mb-3">
-                                    <label for="input-fullname" class="form-label">Nome Cognome</label>
+                                    <label for="imput-fullname" class="form-label">Nome Cognome</label>
                                     <input type="text" class="form-control" id="input-fullname" value="John snow">
                                 </div>
                             </div>
@@ -46,24 +46,25 @@
                                 <label for="input-age" class="form-label">Fascia d'età</label>
                                 <select class="form-select" id="input-age">
                                     <option selected>Scegli l'età</option>
-                                    <option value="1">One</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 d-flex justify-content-center">
-                                <div class="button">
-                                    <button id="btn-generate" class="btn">
-                                        Genera
-                                    </button>
-                                    <button id="btn-cancel" class="btn">
-                                        Annulla
-                                    </button>
+                            <div class="row">
+                                <div class="col-12 d-flex justify-content-center">
+                                    <div class="button">
+                                        <button id="btn-generate" class="btn">
+                                            Genera
+                                        </button>
+                                        <button id="btn-cancel" class="btn">
+                                            Annulla
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
+                       
 
                     </form>
                 </div>
@@ -109,6 +110,7 @@
 
     </main>
     <!--SCRIPT JS-->
+    <script src="./main.js"></script>
     <!--BOOTRSTRAP JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
