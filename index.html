@@ -23,12 +23,96 @@
 </head>
 
 <body>
+    <main class="main">
+        <section id="tiket-price-calculation">
+            <div class="container">
+                <div class="row">
+                    <h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+                    <form class="container">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="input-fullname" class="form-label">Nome Cognome</label>
+                                    <input type="text" class="form-control" id="input-fullname" value="John snow">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="mb-3">
+                                    <label for="input-km" class="form-label">Km da percorrere</label>
+                                    <input type="text" class="form-control" id="input-km" value="10" min="0">
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <label for="input-age" class="form-label">Fascia d'età</label>
+                                <select class="form-select" id="input-age">
+                                    <option selected>Scegli l'età</option>
+                                    <option value="1">One</option>
+                                    <option value="2">Two</option>
+                                    <option value="3">Three</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 d-flex justify-content-center">
+                                <div class="button">
+                                    <button id="btn-generate" class="btn">
+                                        Genera
+                                    </button>
+                                    <button id="btn-cancel" class="btn">
+                                        Annulla
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+        <section id="your-tiket">
+            
+            <div class="container">
+                <h2 class="text-center">IL TUO BIGLIETTO</h2>
+                <div class="row">
+                    <h3>DETTAGLIO PASSEGGERO</h3>
+                </div>
+                <div class="row">
+                    <div class="container d-flex">
+                        <div class="col-4">
+                            <h3>NOME DEL PASSEGGERO</h3>
+                            <h4>Jon Snow</h4>
+                        </div>
+                        <div class="col-8 d-flex">
+                            <div class="col-3" >
+                                <h3>Offerta</h3>
+                                <h4>Biglietto standard</h4>
+                            </div>
+                            <div class="col-3" >
+                                <h3>Carrozza</h3>
+                                <h4>5</h4>
+                            </div>
+                            <div class="col-3"  >
+                                <h3>Codice CP</h3>
+                                <h4>92911</h4>
+                            </div>
+                            <div class="col-3" >
+                                <h3>Costo biglietto</h3>
+                                <h4>2.10 &euro;</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
     <!--SCRIPT JS-->
     <!--BOOTRSTRAP JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous">
-    </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
