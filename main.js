@@ -15,9 +15,6 @@ const outputCode = document.getElementById("code")
 //console.log(formImput);
 
 
-
-
-
 // ! Raccolta dati fissi su sconti e km
 // raccolgo i dati di partenza
 const discount18=20;
@@ -25,9 +22,12 @@ const discount65=40;
 const priceForKm = 0.21;
 //console.log(priceForKm);
 
-
-
-
+const optionElement = document.getElementById("input-age")
+for(let i = 1 ; i <= 100; i++){
+    const listOptionElement = document.createElement("option");
+    listOptionElement.innerHTML=i;
+    optionElement.appendChild(listOptionElement);
+}
 formImput.addEventListener('submit', (event) => {
     event.preventDefault();
     const fullName = fullNameImput.value;
@@ -35,21 +35,19 @@ formImput.addEventListener('submit', (event) => {
     const age = ageImput.value; 
     //calcolo del prezzo finale con lo sconto e annuncio che tipo di biglietto avrà l'utente
     const totalPriceForKm = km * priceForKm;
-    const finalPrice= 0;
-    const tiketType ="";
+    let finalPrice = 0;
+    let tiketType ="";
     if(age > 65){
-        finalPrice = totalPriceForKm * discount65 / 100 ;
+        finalPrice = totalPriceForKm * (1-discount65 / 100) ;
         tiketType ="Biglietto Ridotto";
         
     }
     else if(age > 18){
         finalPrice = totalPriceForKm * discount18 / 100 ;
         tiketType ="Biglietto Ridotto";
-        console.log(finalPrice);
-        console.log(tiketType); 
     }
     else{
-        finalPrice = km * priceForKm ;
+        finalPrice = totalPriceForKm ;
         tiketType ="Biglietto Standard";
     }
 
@@ -61,7 +59,7 @@ formImput.addEventListener('submit', (event) => {
     console.log(fullName);
     console.log(age);
     console.log(km) ;
-    console.log(finalPrice);
+    
     
 outputName.innerHTML= fullName;
 outputPrice.innerHTML= finalPrice + "€";
