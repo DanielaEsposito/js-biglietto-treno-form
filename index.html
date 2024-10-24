@@ -25,45 +25,46 @@
 <body>
     <main class="main">
         <section id="tiket-price-calculation">
-            <div class="container">
+            <h1 class="text-center ">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
+            <div class="container bg bg-white tiket-price-container">
                 <div class="row">
-                    <h1 class="text-center">CALCOLA IL PREZZO DEL TUO BIGLIETTO</h1>
-                    <form id="imput-form"  class="container">
+                    <form id="imput-form" class="container">
                         <div class="row">
-                            <div class="col-4">
+                            <div class="col-4 mt-3">
                                 <div class="mb-3">
                                     <label for="imput-fullname" class="form-label">Nome Cognome</label>
-                                    <input type="text" class="form-control" id="input-fullname"  required placeholder="Mario Rossi">
+                                    <input type="text" class="form-control" id="input-fullname" required
+                                        placeholder="Mario Rossi">
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mt-3">
                                 <div class="mb-3">
                                     <label for="input-km" class="form-label">Km da percorrere</label>
                                     <input type="text" class="form-control" id="input-km" value="10" min="0" required>
                                 </div>
                             </div>
-                            <div class="col-4">
+                            <div class="col-4 mt-3">
                                 <label for="input-age" class="form-label">Fascia d'età</label>
                                 <select class="form-select" id="input-age" required>
                                     <option selected>Scegli l'età</option>
-                                    
-                                    
+
+
                                 </select>
                             </div>
                             <div class="row">
-                                <div class="col-12 d-flex justify-content-center">
+                                <div class="col-12 d-flex justify-content-center mt-4">
                                     <div class="button">
-                                        <button id="btn-generate" class="btn">
+                                        <button id=" btn-generate" class="btn btn-outline">
                                             Genera
                                         </button>
-                                        <button id="btn-cancel" class="btn">
+                                        <button id="btn-cancel" class="btn btn-outline">
                                             Annulla
                                         </button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                       
+
 
                     </form>
                 </div>
@@ -72,37 +73,36 @@
 
         </section>
         <section id="your-tiket">
-            
-            <div class="container">
-                <h2 class="text-center">IL TUO BIGLIETTO</h2>
-                <div class="row">
-                    <h3>DETTAGLIO PASSEGGERO</h3>
-                </div>
-                <div class="row">
-                    <div class="container d-flex">
-                        <div class="col-4">
-                            <h3>NOME DEL PASSEGGERO</h3>
-                            <h4 id="name"></h4>
+            <h1 class="text-center">IL TUO BIGLIETTO</h1>
+            <div class="container bg bg-white your-price-container p-4 ">
+
+                <h4 class="passenger-information">DETTAGLIO PASSEGGERO</h4>
+
+                <div class="col-12 d-flex ticket-container ">
+
+                    <div class="col-4 passenger-name">
+                        <h3>NOME DEL PASSEGGERO</h3>
+                        <h4 id="name"></h4>
+                    </div>
+                    <div class="col-8 d-flex">
+                        <div class="col-3">
+                            <h3>Offerta</h3>
+                            <h4 id="tiket"></h4>
                         </div>
-                        <div class="col-8 d-flex">
-                            <div class="col-3" >
-                                <h3>Offerta</h3>
-                                <h4 id="tiket"></h4>
-                            </div>
-                            <div class="col-3" >
-                                <h3>Carrozza</h3>
-                                <h4 id="carrozza"></h4>
-                            </div>
-                            <div class="col-3"  >
-                                <h3>Codice CP</h3>
-                                <h4 id="code"></h4>
-                            </div>
-                            <div class="col-3" >
-                                <h3>Costo biglietto</h3>
-                                <h4 id="price"> </h4>
-                            </div>
+                        <div class="col-3">
+                            <h3>Carrozza</h3>
+                            <h4 id="carrozza"></h4>
+                        </div>
+                        <div class="col-3">
+                            <h3>Codice CP</h3>
+                            <h4 id="code"></h4>
+                        </div>
+                        <div class="col-3">
+                            <h3>Costo biglietto</h3>
+                            <h4 id="price"> </h4>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>

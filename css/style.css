@@ -9,3 +9,68 @@ img {
     width: 100%;
 }
 
+/*TIKCET PRICE CALCULATION, YOUR TICKET SECTION*/
+.main{
+    background-color: rgb(169, 38, 90);
+    height: 100vh;
+}
+#tiket-price-calculation,
+#your-tiket{
+    
+    padding: 30px 0px;
+}
+/*TIKCET PRICE CALCULATION, YOUR TICKET CONTAINER*/
+.tiket-price-container,
+.your-price-container{
+    border-radius: 10px;
+    height:200px;
+    box-shadow: 1px 2px 4px rgb(68, 15, 36) ;
+}
+
+/*TITLE SECTION*/
+h1{
+    color: white;
+}
+
+/*LABEL*/
+label{
+    color: rgb(169, 38, 90) ;
+    font-weight: bold;
+    
+}
+/*BTN*/
+.btn{
+    border-color: rgb(169, 38, 90)  ;
+    color:rgb(169, 38, 90) ;
+    font-weight: bold;
+    background-color: rgb(236, 236, 236);
+    margin: 0px 10px;
+    box-shadow: 1px 1px 1px rgb(137, 137, 137);
+}
+/*YOUR TICKET*/
+.passenger-information{
+    padding-left: 15px;
+    text-align: left;
+}
+.passenger-name{
+    background-color: gainsboro;
+    border-radius: 5px 0px 0px 5px;
+    border-right: 1px solid black;
+}
+.ticket-container{
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 100px;
+}
+h3{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+h4{
+    color:rgb(115, 24, 60)  
+}
+h3,
+h4{
+    padding-top: 10px;
+    text-align: center;
+}
